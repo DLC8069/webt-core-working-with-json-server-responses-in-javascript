@@ -45,6 +45,6 @@ function randomJobButton(jobs) {
 //UserStory 4
 
 function getSingleJobInfo(selJob) {
-    document.getElementById("#job").innerHTML = "<span class='hervorheben'>Job: </span>" + selJob.Titel + "<br><br>" + " <span class='hervorheben'>arbeitet in: </span>"
-        + selJob.Place + "<br><br>" + "<span class='hervorheben'>Beschreibung: </span><br>" + selJob.Description;
+    document.getElementById("#job").innerHTML = "<span class='hervorheben'>Job:</span>" + " " + selJob.Titel + "<br><br>" + " <span class='hervorheben'>arbeitet in:</span>"
+        + " " + selJob.Place + "<br><br>" + "<span class='hervorheben'>Beschreibung:</span><br>" + " " + selJob.Description;
 }

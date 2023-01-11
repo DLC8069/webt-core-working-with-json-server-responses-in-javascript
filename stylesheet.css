@@ -1,16 +1,18 @@
+@media screen and (min-width: 400px){
 *{
     font-size: 20px;
-    font-family: sans-serif;
+    font-family: "Courier New";
     text-align: center;
 }
 
 body{
-    background-color: lightgrey;
+    background-color: black;
+    color: white;
 }
 
 h1{
-    color: blueviolet;
-    font-size: 55px;
+    color: gold;
+    font-size: 65px;
     text-align: center;
 }
 
@@ -26,8 +28,91 @@ h2{
 }
 
 #job{
-    border: crimson dashed 2px;
+    border: gold dashed 2px;
     width: fit-content;
     padding: 6px;
 }
+
+#jobButton{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 4px 4px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px white;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#jobButton:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+}
+@media screen and (max-width: 400px) {
+    *{
+        font-size: 20px;
+        font-family: "Courier New";
+        text-align: center;
+    }
+
+    body{
+        background-color: black;
+        color: white;
+    }
+
+    h1{
+        color: crimson;
+        font-size: 65px;
+        text-align: center;
+    }
+
+    h2{
+        font-size: 50px;
+    }
+
+    .hervorheben{
+        font-style: italic;
+        font-weight: bold;
+        padding-bottom: 2%;
+        text-decoration: underline;
+    }
+
+    #job{
+        border: gold dashed 2px;
+        width: fit-content;
+        padding: 6px;
+    }
+
+    #jobButton{
+        font-family: "Open Sans", sans-serif;
+        font-size: 31px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: gold;
+        cursor: pointer;
+        border: 3px solid;
+        padding: 0.25em 0.5em;
+        box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 4px 4px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px white;
+        position: relative;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    #jobButton:active {
+        box-shadow: 0px 0px 0px 0px;
+        top: 5px;
+        left: 5px;
+    }
+}
+
 
