@@ -9,11 +9,11 @@ function jsonFetchValues() {
         .then((data) => {
             let val = [];
             let keys = Object.keys(data);
-            keys.forEach(function (key){
+            keys.forEach(function (key) {
                 val.push(data[key])
             });
             document.querySelector("#jsonVal")
-                .innerHTML=val;
+                .innerHTML = val;
             console.log(data);
         })
         .catch((error) => console.log(error));
@@ -24,22 +24,27 @@ function jsonFetchWifi() {
     fetch("./OpenJsonData.json")
         .then((response) => response.json())
         .then((data) => {
-            document.querySelector("#jsonAll");
-            console.log(data);
+            //document.querySelector("#jsonAll");
+            console.log(data)
+            //UserStory 3 Component
+            randomJobButton(data);
         })
         .catch((error) => console.log(error));
 }
 
-//UserStory 3
-const jobs = ["Zimmermann", "Drogendealer", "Busfahrer", "Putzkraft"];
+//UserStory 3 wird in UserStory 2 ausgefuehrt
+function randomJobButton(jobs) {
+    document.querySelector("#jobButton").addEventListener("click", function () {
+        let selJob = jobs[Math.floor(Math.random() * jobs.length)];
 
-document.querySelector("#jobButton").addEventListener("click", function (){
-    document.querySelector("#jobs").innerHTML=jobs[Math.floor(Math.random()*jobs.length)];
-});
+        document.querySelector("#jobs").innerHTML = selJob.Titel;
+        getSingleJobInfo(selJob);
+    });
+}
 
 //UserStory 4
-let job = {title: "Tischler", place_of_work: "Werkstatt", description: "Stellt Möbel her"}
 
-document.getElementById("#job").innerHTML= "Job: " + job.title + "<br>" + " arbeitet in: "
-    +  job.place_of_work + "<br>" + "Beschreibung: " + job.description;
-
+function getSingleJobInfo(selJob) {
+    document.getElementById("#job").innerHTML = "<span class='hervorheben'>Job: </span>" + selJob.Titel + "<br><br>" + " <span class='hervorheben'>arbeitet in: </span>"
+        + selJob.Place + "<br><br>" + "<span class='hervorheben'>Beschreibung: </span><br>" + selJob.Description;
+}

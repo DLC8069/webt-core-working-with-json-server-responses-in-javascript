@@ -1,0 +1,33 @@
+*{
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+body{
+    background-color: lightgrey;
+}
+
+h1{
+    color: blueviolet;
+    font-size: 55px;
+    text-align: center;
+}
+
+h2{
+    font-size: 30px;
+}
+
+.hervorheben{
+    font-style: italic;
+    font-weight: bold;
+    padding-bottom: 2%;
+    text-decoration: underline;
+}
+
+#job{
+    border: crimson dashed 2px;
+    width: fit-content;
+    padding: 6px;
+}
+
